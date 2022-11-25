@@ -32,13 +32,7 @@
 }
 
 /* VARIABLES */
-:root{
-    /* --main-text-color : #fff; */
-    /* --main-bg-color : #fff; */
-    /* --main-font-size : 16px; */
-    /* --main-font-weight : 400; */
-    /* --main-line-height : 1.5; */
-}
+
 *{
     box-sizing: border-box;
 }
@@ -65,6 +59,10 @@ body{
     margin: 0;
     padding: 0;
     background-color: #F5F5F5;
+}
+
+body.shownav-js {
+    overflow-y: hidden;
 }
 
 /* VISUALLY-HIDDEN */
@@ -216,16 +214,16 @@ body{
         background-color: #fff;
         border: 1px solid #1aab7b;
     }
-
+    
     .header__button:hover .header__button-link {
         color: #1aab7b;
     }
-
+    
     .header__button:active {
         background-color: #707070;
         border: 1px solid #707070;
     }
-
+    
     .header__button:active .header__button-link {
         color:#fff;
     }
@@ -265,8 +263,300 @@ body{
 /* ============================ Hero start ============================ */
 
 .hero {
-    padding-top: 93px;
+    padding-top: 50px;
+    padding-bottom: 100px;
     background-color: #fff;
 }
 
+.hero__img {
+    max-width: 592px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero__info {
+    max-width: 537px;
+    width: 100%;
+    margin: 0 auto 40px;
+}
+
+.hero__title {
+    font-weight: 700;
+    line-height: 45px;
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.hero__text {
+    font-weight: 400;
+    line-height: 27px;
+    color: #636f87;
+    margin: 0 0 30px;
+}
+
+.hero__link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #1aab7b;
+    border: 1.5px solid #1aab7b;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.hero__link:hover {
+    background-color: #fff;
+    color:#1aab7b;
+}
+
+.hero__link:active {
+    background-color: #1aab7b;
+    color: #fff;
+    opacity: 0.7;
+}
+
+@media only screen and (min-width:768px){
+    
+    .hero__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .hero__img {
+        max-width: 300px;
+        width: 100%;
+        height: 334px;
+        margin: 0;
+    }
+    
+    .hero__info {
+        margin: 0;
+    }
+    
+    .hero__title  {
+        text-align: start;
+        font-size: 40px;
+        line-height: 57px;
+    }
+    
+    .hero__text {
+        margin-bottom: 40px;
+    }
+    
+}
+
+@media only screen and (min-width:992px){
+    
+    .hero__img {
+        max-width: 400px;
+    }
+    
+    .hero__title {
+        font-size: 56px;
+        line-height: 78px;
+    }
+    
+    .hero__text {
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+    
+    .hero__link {
+        display: inline-block;
+        padding: 20px 40px;
+        margin-top: 10px;
+    }
+    
+}
+
+@media only screen and (min-width:1200px) {
+    
+    .hero {
+        padding-bottom: 156px;
+    }
+    
+    .hero__img  {
+        max-width: 537px;
+    }
+}
+
 /* ============================ Hero end ============================ */
+
+
+/* =========================== Brand start ========================== */
+
+.brand {
+    padding: 50px 0;
+}
+
+.brand__title {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.brand__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.brand__item {
+    max-width: 325px;
+    width: 100%;
+    margin: 0 auto 30px;
+    padding: 30px 30px 40px;
+    background-color: #f2f4f6;
+    border: 2px solid #e1e7ed;
+    border-radius: 6px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.brand__item:nth-of-type(5){
+    margin-bottom: 0;
+}
+
+.brand__item:hover {
+    background-color:#1AAB7B;
+}
+
+.brand__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+.brand__info-subtitle {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #101010;
+    margin: 0;
+}
+
+.brand__item:hover .brand__info-subtitle {
+    color:#fff;
+}
+
+.brand__item:hover .brand__info-img {
+    background-color: #fff;
+}
+
+.brand__item:hover .brand__item-text{
+    color:#fff;
+}
+
+.brand__item:hover .brand__item-link{
+    color:#fff;
+    text-decoration: underline;
+}
+
+.brand__info-img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: #e1e7ed;
+    border-radius: 84px;
+    transition: 0.5s;
+}
+
+.brand__info-img::after {
+    position: absolute;
+    background-image: url("../images/designer.svg");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    content: "";
+}
+
+.brand__info-smm::after {
+    background-image: url("../images/smm.svg");
+}
+
+.brand__info-branding::after {
+    background-image: url("../images/branding.svg");
+}
+
+.brand__info-developer::after {
+    background-image: url("../images/developer.svg");
+}
+
+.brand__info-graphic::after {
+    background-image: url("../images/graphicdes.svg");
+}
+
+.brand__item-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-top: 0;
+    margin-bottom: 23px;
+    height: 162px;
+    color: #636F87;
+}
+
+.brand__item-link {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+    text-decoration: none;
+}
+
+@media only screen and (min-width:768px){
+    
+    .brand__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media only screen and (min-width:992px){
+    
+    .brand__item {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .brand__item:nth-of-type(4){
+        margin-bottom: 0;
+    }
+
+    .brand__item-text {
+        font-size: 18px;
+    }
+    
+}
+
+
+@media only screen and (min-width:1200px){
+
+    .brand__item {
+        max-width: 384px;
+    }
+
+    .brand__item:nth-of-type(4){
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .brand__item:nth-of-type(5){
+        margin-left: 30px;
+        margin-right: 0;
+    }
+
+}
+
+
+/* =========================== Brand end ========================== */
