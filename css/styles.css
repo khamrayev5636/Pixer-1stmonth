@@ -863,7 +863,7 @@ body.shownav-js {
     align-items: center;
     list-style: none;
     padding-left: 0;
-    margin: 0;
+    margin: 0 0 40px 0;
 }
 
 .footer__network {
@@ -934,6 +934,7 @@ body.shownav-js {
     font-size: 18px;
     line-height: 27px;
     color: #fff;
+    margin: 0;
 }
 
 .footer__logo-img:hover {
@@ -965,6 +966,7 @@ body.shownav-js {
     
     .footer__list {
         align-items: flex-start;
+        margin: 0;
     }
     
     .footer__list:nth-of-type(2){
