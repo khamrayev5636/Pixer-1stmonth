@@ -61,9 +61,7 @@ body{
     background-color: #F5F5F5;
 }
 
-body.shownav-js {
-    overflow-y: hidden;
-}
+
 
 /* VISUALLY-HIDDEN */
 .visually-hidden {
@@ -181,6 +179,10 @@ body.shownav-js {
 
 .header__button {
     display: none;
+}
+
+.body-js{
+    overflow: hidden;
 }
 
 /* ================= Media start =================  */
@@ -948,11 +950,11 @@ body.shownav-js {
 
 @media only screen and (min-width:768px){
     
-
+    
     .footer {
         padding-top: 100px;
     }
-
+    
     .footer__wrapper {
         display: flex;
         justify-content: space-between;

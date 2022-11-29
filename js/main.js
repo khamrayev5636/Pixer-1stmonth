@@ -3,12 +3,7 @@ const elBody = document.querySelector("body");
 
 elBurgerBtn.addEventListener("click" , ()=> {
     elBurgerBtn.closest(".header").classList.toggle("shownav");
+    elBody.classList.toggle("body-js")
 })
 
-elBurgerBtn.addEventListener("click" , ()=> {
-    elBody.classList.add("shownav-js")
-});
 
-elBurgerBtn.addEventListener("click" , ()=> {
-    elBody.classList.remove("shownav-js")
-});
